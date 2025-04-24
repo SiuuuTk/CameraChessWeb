@@ -1,11 +1,37 @@
 import NavButton from "./navButton";
+import { SocialIcon } from "react-social-icons/component";
+import "react-social-icons";
 
 const Home = () => {
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100 flex-column text-center text-white bg-dark">
-      <div className="d-flex gap-4">
+    <div className="container-flex d-flex flex-column justify-content-between align-items-center h-100 p-0 m-0 text-white bg-dark">
+
+      {/* Logo + Live Mode */}
+      <div className="mt-4 text-center">
+        <img src="/android-chrome-512x512.png" alt="Logo" width="460" height="74" />
+        <h2 style={{ color: "rgb(108, 162, 94)", marginTop: "10px" }}>Live Mode</h2>
+      </div>
+
+      {/* Boutons centrés et remontés */}
+      <div className="d-flex justify-content-center align-items-center mt-5" style={{ gap: "50px" }}>
         <NavButton text="Upload" tokenRequired={false} />
         <NavButton text="Record" tokenRequired={false} />
+      </div>
+
+      {/* Réseaux sociaux */}
+      <div className="d-flex justify-content-center align-items-center mb-4 mt-auto">
+        <SocialIcon
+          url="https://x.com/CheckMTracker"
+          className="mx-2"
+          bgColor="rgb(33, 37, 41)"
+          fgColor="#ffffff"
+        />
+        <SocialIcon
+          url="https://www.facebook.com/profile.php?id=61575655197875"
+          className="mx-2"
+          bgColor="rgb(33, 37, 41)"
+          fgColor="#ffffff"
+        />
       </div>
     </div>
   );
