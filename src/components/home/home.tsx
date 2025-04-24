@@ -6,9 +6,25 @@ const Home = () => {
   return (
     <div className="container-flex d-flex flex-column justify-content-between align-items-center h-100 p-0 m-0 text-white bg-dark">
 
-      {/* Logo + Live Mode */}
+      {/* Logo cliquable + Live Mode */}
       <div className="mt-4 text-center">
-        <img src="/android-chrome-512x512.png" alt="Logo" width="460" height="74" />
+        <a
+          href="https://checkmatetracker.com"
+          target="_self"
+          style={{ textDecoration: "none" }}
+        >
+          <img
+            src="/android-chrome-512x512.png"
+            alt="Logo"
+            width="400"
+            style={{
+              transition: "transform 0.3s ease-in-out",
+              cursor: "pointer",
+            }}
+            onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
+            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1.0)")}
+          />
+        </a>
         <h2 style={{ color: "rgb(108, 162, 94)", marginTop: "10px" }}>Live Mode</h2>
       </div>
 
