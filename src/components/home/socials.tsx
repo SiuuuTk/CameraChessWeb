@@ -1,4 +1,4 @@
-import { SocialIcon } from 'react-social-icons/component'
+/*import { SocialIcon } from 'react-social-icons/component'
 import 'react-social-icons/youtube'
 import 'react-social-icons/github'
 import 'react-social-icons/google_play'
@@ -22,4 +22,4 @@ const Socials = () => {
   return icons;
 };
 
-export default Socials;
+export default Socials;*/

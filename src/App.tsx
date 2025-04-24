@@ -14,8 +14,9 @@ const App = () => {
   const token = userSelect().token;
   const [loading, setLoading] = useState(true);
   
-  const piecesModelRef = useRef<GraphModel>();
-  const xcornersModelRef = useRef<GraphModel>();
+  const piecesModelRef = useRef<GraphModel | null>(null);
+const xcornersModelRef = useRef<GraphModel | null>(null);
+
   const modelRefs: ModelRefs = {
     "piecesModelRef": piecesModelRef,
     "xcornersModelRef": xcornersModelRef,           
