@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "checkmate-tracker",
+    "livemode": "checkmate-tracker---live-mode"
+  },
+  "targets": {},
+  "etags": {}
+}
