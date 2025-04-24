@@ -1,35 +1,20 @@
-import * as tf from "@tensorflow/tfjs-core";
+import * as tf from "@tensorflow/tfjs";
 import { loadGraphModel, GraphModel } from "@tensorflow/tfjs-converter";
-import { MODEL_HEIGHT, MODEL_WIDTH } from "../utils/constants";
+/*import { MODEL_HEIGHT, MODEL_WIDTH } from "../utils/constants";*/
 
-const LoadModels = (piecesModelRef: any, xcornersModelRef: any) => {
-  if ((piecesModelRef.current !== undefined) && (xcornersModelRef.current !== undefined)) {
-    return;
-  }
+const LoadModels = async (
+  piecesModelRef: React.MutableRefObject<GraphModel | null>,
+  xcornersModelRef: React.MutableRefObject<GraphModel | null>
+) => {
+  if (piecesModelRef.current && xcornersModelRef.current) return;
 
-  tf.ready().then(async () => {
-    tf.env().set('WEBGL_EXP_CONV', true);
-    tf.env().set('WEBGL_PACK', false);
-    tf.env().set('ENGINE_COMPILE_ONLY', true);
+  await tf.ready();
 
-    const dummyInput: tf.Tensor<tf.Rank> = tf.zeros([1, MODEL_HEIGHT, MODEL_WIDTH, 3]);
+  // Charge les modèles
+  piecesModelRef.current = await loadGraphModel("/480M_pieces_float16/model.json");
+  xcornersModelRef.current = await loadGraphModel("/480L_xcorners_float16/model.json");
 
-    const piecesModel: GraphModel = await loadGraphModel("480M_pieces_float16/model.json");
-    const piecesOutput: tf.Tensor<tf.Rank> | tf.Tensor<tf.Rank>[] = piecesModel.execute(dummyInput);
-
-    const xcornersModel: GraphModel = await loadGraphModel("480L_xcorners_float16/model.json");
-    const xcornersOutput: tf.Tensor<tf.Rank> | tf.Tensor<tf.Rank>[]  = xcornersModel.execute(dummyInput);
-
-    tf.dispose([dummyInput, piecesOutput, xcornersOutput]);
-    
-    const backend: any = tf.backend()
-    backend.checkCompileCompletion();
-    backend.getUniformLocations();
-    tf.env().set('ENGINE_COMPILE_ONLY', false);
-
-    piecesModelRef.current = piecesModel;
-    xcornersModelRef.current = xcornersModel;
-  })
+  console.log("Modèles chargés avec succès.");
 };
 
 export default LoadModels;
