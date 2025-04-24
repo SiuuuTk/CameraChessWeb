@@ -1,8 +1,17 @@
 {
   "projects": {
     "default": "checkmate-tracker",
-    "livemode": "checkmate-tracker---live-mode"
+    "livemode": "checkmate-tracker---live-mode",
+    "live": "checkmate-tracker-livemode"
   },
-  "targets": {},
+  "targets": {
+    "checkmate-tracker-livemode": {
+      "hosting": {
+        "live": [
+          "checkmate-tracker-livemode"
+        ]
+      }
+    }
+  },
   "etags": {}
 }
