@@ -16,6 +16,7 @@ const Home = () => {
           <img
             src="/android-chrome-512x512.png"
             alt="Logo"
+            className="responsive-logo"
             width="400"
             style={{
               transition: "transform 0.3s ease-in-out",
@@ -25,17 +26,19 @@ const Home = () => {
             onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1.0)")}
           />
         </a>
-        <h2 style={{ color: "rgb(108, 162, 94)", marginTop: "10px" }}>Live Mode</h2>
+        <h2 className="responsive-title" style={{ color: "rgb(108, 162, 94)", marginTop: "10px" }}>
+          Live Mode
+        </h2>
       </div>
 
       {/* Boutons centrés et remontés */}
-      <div className="d-flex justify-content-center align-items-center mt-5" style={{ gap: "50px" }}>
+      <div className="d-flex justify-content-center align-items-center mt-5 button-wrapper">
         <NavButton text="Upload" tokenRequired={false} />
         <NavButton text="Record" tokenRequired={false} />
       </div>
 
       {/* Réseaux sociaux */}
-      <div className="d-flex justify-content-center align-items-center mb-4 mt-auto">
+      <div className="d-flex justify-content-center align-items-center mb-4 mt-auto social-wrapper">
         <SocialIcon
           url="https://x.com/CheckMTracker"
           className="mx-2"

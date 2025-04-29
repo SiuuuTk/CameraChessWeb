@@ -33,3 +33,34 @@ html, body {
   background-color: rgba(255, 255, 255, 0.1);
   transform: scale(1.05);
 }
+
+/* ✅ Responsive uniquement sur mobile */
+@media only screen and (max-width: 768px) {
+  .responsive-logo {
+    width: 70% !important;
+    max-width: 250px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .responsive-title {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .button-wrapper {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .button-wrapper button {
+    width: 90% !important;
+    font-size: 1.1rem;
+    padding: 12px 0;
+  }
+
+  .social-wrapper {
+    gap: 20px;
+  }
+}
