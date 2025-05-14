@@ -13,14 +13,14 @@ const App = () => {
   const navigate: NavigateFunction = useNavigate();
   const token = userSelect().token;
   const [loading, setLoading] = useState(true);
-  
+
   const piecesModelRef = useRef<GraphModel | null>(null);
-const xcornersModelRef = useRef<GraphModel | null>(null);
+  const xcornersModelRef = useRef<GraphModel | null>(null);
 
   const modelRefs: ModelRefs = {
-    "piecesModelRef": piecesModelRef,
-    "xcornersModelRef": xcornersModelRef,           
-  }
+    piecesModelRef: piecesModelRef,
+    xcornersModelRef: xcornersModelRef,
+  };
 
   useEffect(() => {
     if (token === "") {
@@ -29,11 +29,7 @@ const xcornersModelRef = useRef<GraphModel | null>(null);
     setLoading(false);
   }, []);
 
-  return (
-    <>
-      {!loading && <Outlet context={modelRefs}/>}
-    </>
-  );
+  return <>{!loading && <Outlet context={modelRefs} />}</>;
 };
 
 export default App;

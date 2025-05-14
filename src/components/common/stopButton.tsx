@@ -4,7 +4,13 @@ import { gameResetFen, gameResetMoves } from "../../slices/gameSlice";
 import SidebarButton from "./sidebarButton";
 import Icon from "./icon";
 
-const StopButton = ({ setPlaying, setText }: { setPlaying: SetBoolean, setText: SetStringArray }) => {
+const StopButton = ({
+  setPlaying,
+  setText,
+}: {
+  setPlaying: SetBoolean;
+  setText: SetStringArray;
+}) => {
   const dispatch = useDispatch();
 
   const handleClick = (e: any) => {
@@ -13,10 +19,10 @@ const StopButton = ({ setPlaying, setText }: { setPlaying: SetBoolean, setText: 
     setPlaying(false);
     dispatch(gameResetMoves());
     dispatch(gameResetFen());
-    setText(["Reset to start position"])
-  }
+    setText(["Reset to start position"]);
+  };
 
- return (
+  return (
     <SidebarButton onClick={handleClick}>
       <Icon iconName="bi-stop" />
     </SidebarButton>

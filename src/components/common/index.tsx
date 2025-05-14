@@ -13,8 +13,19 @@ import StudyButton from "./studyButton";
 import FenButton from "./fenButton";
 import DeviceButton from "./deviceButton";
 
-export { 
-  SidebarButton, CornersButton, PgnButton, Icon, Corners,
-  HomeButton, Sidebar, Container, VideoAndSidebar, RecordButton, StopButton, StudyButton,
-  FenButton, DeviceButton,
+export {
+  SidebarButton,
+  CornersButton,
+  PgnButton,
+  Icon,
+  Corners,
+  HomeButton,
+  Sidebar,
+  Container,
+  VideoAndSidebar,
+  RecordButton,
+  StopButton,
+  StudyButton,
+  FenButton,
+  DeviceButton,
 };

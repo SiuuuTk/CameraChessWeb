@@ -8,21 +8,21 @@ import {
   PERSIST,
   PURGE,
   REGISTER,
-} from 'redux-persist'
+} from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { cornersReducer, gameReducer, userReducer } from "./slices";
 
 const reducer = combineReducers({
   game: gameReducer,
   corners: cornersReducer,
-  user: userReducer
-})
+  user: userReducer,
+});
 
 const persistConfig = {
   key: "root",
   version: 1,
   storage,
-  blacklist: []
+  blacklist: [],
 };
 
 const persistedReducer = persistReducer(persistConfig, reducer);
@@ -30,11 +30,11 @@ const persistedReducer = persistReducer(persistConfig, reducer);
 const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
-  getDefaultMiddleware({
-    serializableCheck: {
-      ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-    },
-  }),
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
 });
 
 export default store;

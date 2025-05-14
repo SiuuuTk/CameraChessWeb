@@ -10,17 +10,17 @@ const Board = ({ pgn }: { pgn: string }) => {
     const data = await lichessImportPgn(token, pgn);
     const emb: string = `https://lichess.org/embed/game/${data.id}?theme=brown&bg=dark`;
     setEmb(emb);
-  }
+  };
 
   useEffect(() => {
     getEmb();
-  }, [])
+  }, []);
 
   return (
     <div className="ratio ratio-21x9">
       <iframe src={emb} />
     </div>
   );
-}
+};
 
 export default Board;

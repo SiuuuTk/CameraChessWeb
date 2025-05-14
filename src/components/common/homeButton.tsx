@@ -5,13 +5,13 @@ import Icon from "./icon";
 const HomeButton = () => {
   const navigate = useNavigate();
 
-  const handleClick = () => {    
-    navigate("/"); 
-  }
-  
+  const handleClick = () => {
+    navigate("/");
+  };
+
   return (
-    <SidebarButton onClick={handleClick} >
-      <Icon iconName="bi-house"/>
+    <SidebarButton onClick={handleClick}>
+      <Icon iconName="bi-house" />
     </SidebarButton>
   );
 };

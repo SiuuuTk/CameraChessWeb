@@ -1,12 +1,12 @@
 import { useRef } from "react";
-import Draggable from 'react-draggable';
+import Draggable from "react-draggable";
 import React from "react";
 import { MARKER_DIAMETER } from "../../utils/constants";
-import { useDispatch } from 'react-redux';
-import { cornersSet } from '../../slices/cornersSlice';
-import { CornersPayload, CornersKey } from '../../types';
+import { useDispatch } from "react-redux";
+import { cornersSet } from "../../slices/cornersSlice";
+import { CornersPayload, CornersKey } from "../../types";
 
-const Marker = ({ name, xy }: { name: CornersKey, xy: number[] }) => {
+const Marker = ({ name, xy }: { name: CornersKey; xy: number[] }) => {
   const boxStyle: React.CSSProperties = {
     height: MARKER_DIAMETER,
     width: MARKER_DIAMETER,
@@ -50,7 +50,9 @@ const Marker = ({ name, xy }: { name: CornersKey, xy: number[] }) => {
       }}
     >
       <div className="box no-cursor" style={boxStyle} ref={rawRef}>
-        <strong className="cursor" style={cursorStyle}>{name}</strong>
+        <strong className="cursor" style={cursorStyle}>
+          {name}
+        </strong>
       </div>
     </Draggable>
   );

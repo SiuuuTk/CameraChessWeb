@@ -9,11 +9,9 @@ export default defineConfig({
     VitePWA({
       workbox: {
         globPatterns: ["**/*"],
-        maximumFileSizeToCacheInBytes: 5000000
+        maximumFileSizeToCacheInBytes: 5000000,
       },
-      includeAssets: [
-        "**/*",
-      ],
+      includeAssets: ["**/*"],
       manifest: {
         name: "Checkmate Tracker - Live Mode",
         short_name: "Live Mode",
@@ -22,19 +20,19 @@ export default defineConfig({
           {
             src: "/android-chrome-192x192.png",
             sizes: "192x192",
-            type: "image/png"
+            type: "image/png",
           },
           {
             src: "/android-chrome-512x512.png",
             sizes: "512x512",
-            type: "image/png"
-          }
+            type: "image/png",
+          },
         ],
         theme_color: "#ffffff",
         background_color: "#ffffff",
-        display: "standalone"
-      }
-    })
+        display: "standalone",
+      },
+    }),
   ],
   build: {
     chunkSizeWarningLimit: 2000,

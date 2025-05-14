@@ -1,7 +1,5 @@
 {
-  "files": [
-    "README.md"
-  ],
+  "files": ["README.md"],
   "imageSize": 100,
   "commit": false,
   "contributors": [
@@ -10,63 +8,49 @@
       "name": "Conor Shepherd",
       "avatar_url": "https://avatars.githubusercontent.com/u/75845466?v=4",
       "profile": "https://github.com/ConorShepherd",
-      "contributions": [
-        "research"
-      ]
+      "contributions": ["research"]
     },
     {
       "login": "tdr24008",
       "name": "tdr24008",
       "avatar_url": "https://avatars.githubusercontent.com/u/109679977?v=4",
       "profile": "https://github.com/tdr24008",
-      "contributions": [
-        "research"
-      ]
+      "contributions": ["research"]
     },
     {
       "login": "DakshHandeCode",
       "name": "DakshHandeCode",
       "avatar_url": "https://avatars.githubusercontent.com/u/153603746?v=4",
       "profile": "https://github.com/DakshHandeCode",
-      "contributions": [
-        "design"
-      ]
+      "contributions": ["design"]
     },
     {
       "login": "ChessScholar",
       "name": "ChessScholar",
       "avatar_url": "https://avatars.githubusercontent.com/u/65353254?v=4",
       "profile": "https://github.com/ChessScholar",
-      "contributions": [
-        "bug"
-      ]
+      "contributions": ["bug"]
     },
     {
       "login": "JohnP-1",
       "name": "JohnP-1",
       "avatar_url": "https://avatars.githubusercontent.com/u/55811674?v=4",
       "profile": "https://github.com/JohnP-1",
-      "contributions": [
-        "bug"
-      ]
+      "contributions": ["bug"]
     },
     {
       "login": "AbdullahKhetran",
       "name": "Abdullah Khetran",
       "avatar_url": "https://avatars.githubusercontent.com/u/101284310?v=4",
       "profile": "https://github.com/AbdullahKhetran",
-      "contributions": [
-        "research"
-      ]
+      "contributions": ["research"]
     },
     {
       "login": "tejasraman",
       "name": "Tejas Raman",
       "avatar_url": "https://avatars.githubusercontent.com/u/96961804?v=4",
       "profile": "http://tejasraman.me",
-      "contributions": [
-        "security"
-      ]
+      "contributions": ["security"]
     }
   ],
   "contributorsPerLine": 7,

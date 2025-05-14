@@ -23,46 +23,48 @@ Do you have ideas, bugs to report or training footage? Join our [Discord Server]
 </div>
 
 ## Demo
+
 [<img src="https://raw.githubusercontent.com/wiki/Pbatch/CameraChessWeb/images/thumbnail.png" width="100%">](https://youtu.be/AAs4EX372bc)
 
 ## Roadmap
 
-* Raise an alert when an illegal move is played (currently they're just ignored)
-* Add sounds for the opponents moves in "/play"
-* Add support for variants
-* Develop a testing framework for different board + piece sets
-* ... Your next big idea?
+- Raise an alert when an illegal move is played (currently they're just ignored)
+- Add sounds for the opponents moves in "/play"
+- Add support for variants
+- Develop a testing framework for different board + piece sets
+- ... Your next big idea?
 
 ## Models, Data, Reports and Scripts
 
 Please post in the Issues tab if you need any help with:
-* Running inference
-* Exporting models to different formats
-* Training on data of varying resolutions (I.e. 640x640)
-* etc. etc.
+
+- Running inference
+- Exporting models to different formats
+- Training on data of varying resolutions (I.e. 640x640)
+- etc. etc.
 
 ### Pieces
 
-| Name | Description | Link |
-| :---: | :---: | :---: |
-| 480M_leyolo_pieces.onnx | LeYOLO ONNX model| https://drive.google.com/file/d/1-80xp_nly9i6s3o0mF0mU9OZGEzUAlGj/view?usp=sharing |
-| 480M_leyolo_pieces.pt | LeYOLO pt model | https://drive.google.com/file/d/1L6PZbSdT-peCmiJGNwmgHJN5MTpfAM-0/view?usp=sharing |
-| pieces.tar.gz | Train/test data in YOLOv5 format | https://drive.google.com/file/d/1CrrINu11Wy8Cv1H4Q9DbcGqir3GPPO29/view?usp=sharing |
-| Report | Weights & Biases report from the LeYOLO training run | https://api.wandb.ai/links/pbatch/g2rcvycv |
+|          Name           |                     Description                      |                                        Link                                        |
+| :---------------------: | :--------------------------------------------------: | :--------------------------------------------------------------------------------: |
+| 480M_leyolo_pieces.onnx |                  LeYOLO ONNX model                   | https://drive.google.com/file/d/1-80xp_nly9i6s3o0mF0mU9OZGEzUAlGj/view?usp=sharing |
+|  480M_leyolo_pieces.pt  |                   LeYOLO pt model                    | https://drive.google.com/file/d/1L6PZbSdT-peCmiJGNwmgHJN5MTpfAM-0/view?usp=sharing |
+|      pieces.tar.gz      |           Train/test data in YOLOv5 format           | https://drive.google.com/file/d/1CrrINu11Wy8Cv1H4Q9DbcGqir3GPPO29/view?usp=sharing |
+|         Report          | Weights & Biases report from the LeYOLO training run |                     https://api.wandb.ai/links/pbatch/g2rcvycv                     |
 
 ### Xcorners
 
-| Name | Description | Link |
-| :---: | :---: | :---: |
-| 480L_leyolo_xcorners.onnx | LeYOLO ONNX model | https://drive.google.com/file/d/1-2wodbiXag9UQ44e2AYAmoRN6jVpxy83/view?usp=sharing |
-| 480L_leyolo_xcorners.pt | LeYOLO pt model | https://drive.google.com/file/d/173orSe8eaytN8nin_HOvd2sEfP_wtOUW/view?usp=sharing |
-| xcorners.tar.gz | Train/test data in YOLOv5 format | https://drive.google.com/file/d/15Liy-vMcujSZak4YRPeC2TpVjIA3AwVM/view?usp=sharing |
-| Report | Weights & Biases report from the LeYOLO training run | https://api.wandb.ai/links/pbatch/ziwur3gr |
+|           Name            |                     Description                      |                                        Link                                        |
+| :-----------------------: | :--------------------------------------------------: | :--------------------------------------------------------------------------------: |
+| 480L_leyolo_xcorners.onnx |                  LeYOLO ONNX model                   | https://drive.google.com/file/d/1-2wodbiXag9UQ44e2AYAmoRN6jVpxy83/view?usp=sharing |
+|  480L_leyolo_xcorners.pt  |                   LeYOLO pt model                    | https://drive.google.com/file/d/173orSe8eaytN8nin_HOvd2sEfP_wtOUW/view?usp=sharing |
+|      xcorners.tar.gz      |           Train/test data in YOLOv5 format           | https://drive.google.com/file/d/15Liy-vMcujSZak4YRPeC2TpVjIA3AwVM/view?usp=sharing |
+|          Report           | Weights & Biases report from the LeYOLO training run |                     https://api.wandb.ai/links/pbatch/ziwur3gr                     |
 
 ### Google Colab scripts
 
-* LeYOLO Training + ONNX export - https://gist.github.com/Pbatch/dccc680ac2f852d4f258e4b6f1997a7b
-* TFJS export - https://gist.github.com/Pbatch/46d958df7e0363e42561bda50163a57a
+- LeYOLO Training + ONNX export - https://gist.github.com/Pbatch/dccc680ac2f852d4f258e4b6f1997a7b
+- TFJS export - https://gist.github.com/Pbatch/46d958df7e0363e42561bda50163a57a
 
 ## Contributors ✨
 

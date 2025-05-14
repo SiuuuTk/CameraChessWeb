@@ -18,7 +18,10 @@ interface findFenInput {
   color: Color;
 }
 
-const getFenAndError = (board: Chess, color: Color): { fen: string; error: string | null } | undefined => {
+const getFenAndError = (
+  board: Chess,
+  color: Color,
+): { fen: string; error: string | null } | undefined => {
   let fen = board.fen();
   const otherColor: Color = color === "w" ? "b" : "w";
   fen = fen.replace(` ${otherColor} `, ` ${color} `);
@@ -47,7 +50,7 @@ const setFenFromState = (
   state: number[][],
   color: Color,
   dispatch: any,
-  setText: SetStringArray
+  setText: SetStringArray,
 ) => {
   const assignment = Array(64).fill(-1);
 

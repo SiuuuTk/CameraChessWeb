@@ -3,8 +3,14 @@ import { clearCtx } from "../../../utils/render/common";
 import { Icon, SidebarButton } from "../../common";
 import { SetBoolean } from "../../../types";
 
-const VideoButton = ({ videoRef, canvasRef, setPlaying }: {
-  videoRef: any, canvasRef: any, setPlaying: SetBoolean
+const VideoButton = ({
+  videoRef,
+  canvasRef,
+  setPlaying,
+}: {
+  videoRef: any;
+  canvasRef: any;
+  setPlaying: SetBoolean;
 }) => {
   const inputVideoRef: any = useRef(null);
   const [streaming, setStreaming] = useState(false);
@@ -16,7 +22,7 @@ const VideoButton = ({ videoRef, canvasRef, setPlaying }: {
       URL.revokeObjectURL(url);
     }
 
-    clearCtx(canvasRef.current.getContext('2d'));
+    clearCtx(canvasRef.current.getContext("2d"));
 
     setStreaming(false);
     inputVideoRef.current.value = "";
@@ -24,11 +30,11 @@ const VideoButton = ({ videoRef, canvasRef, setPlaying }: {
   };
 
   const handleOnChange = (e: any) => {
-    const url = URL.createObjectURL(e.target.files[0]); 
+    const url = URL.createObjectURL(e.target.files[0]);
     videoRef.current.src = url;
     videoRef.current.style.display = "block";
     setStreaming(true);
-  }
+  };
 
   const handleOnClick = () => {
     if (streaming === false) {
@@ -37,7 +43,7 @@ const VideoButton = ({ videoRef, canvasRef, setPlaying }: {
       closeVideo();
     }
     setPlaying(false);
-  }
+  };
 
   return (
     <>
@@ -56,4 +62,3 @@ const VideoButton = ({ videoRef, canvasRef, setPlaying }: {
 };
 
 export default VideoButton;
-
